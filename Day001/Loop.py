@@ -12,7 +12,7 @@ while True:
     print("count:",count)
     count = count + 1
     if count == 1000:
-        break
+        break # 打断并结束循环
 
 
 count1 = 0
@@ -38,3 +38,11 @@ else: # 循环正常走完则执行，若中途被break打断则不执行
 
 for i in range(1,10,3): # range(循环开始值，循环结束值，循环间隔)
     print("loop:",i)
+
+
+for i in range(1,10):
+    if i<3:
+        print("Loop",i)
+    else:
+        continue # 打断并进入下一次循环
+    print("hehe..")
