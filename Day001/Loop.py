@@ -46,3 +46,7 @@ for i in range(1,10):
     else:
         continue # 打断并进入下一次循环
     print("hehe..")
+
+
+for index,i in enumerate(range(2,10)): # enumerate 获取下标（循环次数，从0开始）
+    print(index,'\t',i)

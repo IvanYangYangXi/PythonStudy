@@ -21,3 +21,10 @@ print(msg.encode(encoding="utf-8").decode(encoding="utf-8"))
 
 print('€20'.encode('utf-8'))
 print(b'\xe2\x82\xac20'.decode('utf-8'))
+
+n1 = input("输入字符串或数字：")
+if n1.isdigit():  # .isdigit 判断是否为数字
+    n1 = int(n1)
+    print("输入是数字")
+else:
+    print("输入为非数字")

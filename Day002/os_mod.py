@@ -16,5 +16,11 @@ cmd_res2 = os.popen("dir") # 查看当前路径下的文件，并存储结果，
 print("-->",cmd_res2) # 输出是内存地址
 print("-->",cmd_res2.read()) # 使用 .read（） 读取内容
 
-os.mkdir("new_dir")
-# os.makedirs 创建多级目录
+# os.mkdir("new_dir") # 创建目录
+# os.makedirs # 创建多级目录
+
+open("test.txt",'w') # 创建文件
+os.remove("test.txt") # 删除文件
+
+print(os.path.abspath('.'))   #表示当前所处的文件夹的绝对路径  
+print(os.path.abspath('..'))  #表示当前所处的文件夹上一级文件夹的绝对路径  
