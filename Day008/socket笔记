@@ -1,0 +1,18 @@
+
+socket
+
+1、读取文件名
+2、检测文件是否存在
+3、打开文件
+4、检测文件大小
+5、发送文件大小给客户端
+6、等待客户端确认
+7、开始边读边发数据
+8、发送md5
+
+
+socketserver
+
+1、必须自己创建一个请求处理类，且继承BaseRequestHandler，并重写父类的handle()
+2、必须实例化TCPServer，并传递server IP 和 上面创建的请求处理类 给这个TCPServer
+3、使用 server.server_forever() 处理多个请求，且永远执行； # server.handle_request() 只处理一个请求，通常不用
