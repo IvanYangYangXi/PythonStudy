@@ -15,6 +15,7 @@ print(sys.argv) # sys.argv 获得相对路径
 
 print(sys.getdefaultencoding()) # sys.getdefaultencoding() 获取系统默认编码
 
+# sys.path.append(path) # 临时添加环境变量
 
 for i in range(20):
     sys.stdout.write("#")
