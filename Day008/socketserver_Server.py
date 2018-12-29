@@ -21,7 +21,7 @@ class MyRequestHandler(socketserver.BaseRequestHandler):
                 print(self.client_address,"客户端断开了")
                 break
             print(self.data)
-            self.request.sendall(self.data.upper()) # 发送数据
+            self.request.sendall(self.data.upper()+ b'\x00') # 发送数据(UE4 Socket连接，数据需要后面加上 b'\x00')
 
             # try: # 如果上面的方式会报错使用以下方式
             #     self.data = self.request.recv(1024).strip() # 接受数据

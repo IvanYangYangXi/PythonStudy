@@ -59,7 +59,8 @@ def func2():
 
 
 root = tkinter.Tk()
-# root.withdraw() #这里需要注意的是，需要创建一个Tkinter.Tk()实例，然后将其隐藏（root.withdraw(),因为在使用filedialog.askopenfilename()时调用了GUI组件，使用后需要有GUI进程来管理这个句柄。当我们注释掉root = Tkinter.Tk()和root.withdraw()后，再运行这段代码，可以发现filedialog.askopenfilename()后桌面会一直有个Tk窗口，而且处于未响应状态。
+root.withdraw() #这里需要注意的是，需要创建一个Tkinter.Tk()实例，然后将其隐藏（root.withdraw(),因为在使用filedialog.askopenfilename()时调用了GUI组件，使用后需要有GUI进程来管理这个句柄。当我们注释掉root = Tkinter.Tk()和root.withdraw()后，再运行这段代码，可以发现filedialog.askopenfilename()后桌面会一直有个Tk窗口，而且处于未响应状态。
+func1()
 btn = tkinter.Button(root,text='click',command=func1)
 btn1 = tkinter.Button(root,text="信息、警告、错误消息框",command=info_warn_err)
 btn2 = tkinter.Button(root,text="对话框",command=func2)
