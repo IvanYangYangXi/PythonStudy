@@ -25,7 +25,9 @@ while True: # 等待客户端连接
             print('客户端已断开')
             break
         print('执行指令：',data)
-        cmd_res = os.popen(data.decode()).read() # 执行os指令，（使用.popen（）将字符串作为指令执行）
+        # cmd_res = os.popen(data.decode()).read() # 执行os指令，（使用.popen（）将字符串作为指令执行）
+        cmd_res = data.decode()
+        print(cmd_res)
         print('before send',len(cmd_res)) # 发送前检查发送数据的长度，若为0则不发送
         if len(cmd_res) == 0:
             cmd_res = "cmd has no output..."
