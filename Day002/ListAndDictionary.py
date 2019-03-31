@@ -74,11 +74,15 @@ dict['School'] = "RUNOOB" # 添加
 # cmp(dict1, dict2) # 比较两个字典元素
 len(dict) # 计算字典元素个数，即键的总数
 dict.copy() # 返回一个字典的浅复制
-dict.has_key(key) # 如果键在字典dict里返回true，否则返回false
+# dict.has_key(key) # 如果键在字典dict里返回true，否则返回false
+if ('lastProject' in dict.keys()): # 判断字典是否存在某个key
+    dict['lastProject']
 dict.keys() # 以列表返回一个字典所有的键
+print(list(dict.keys())) # 转换为列表形式
 dict.values() # 以列表返回字典中的所有值
 # dict.update(dict2) # 把字典dict2的键值更新到dict1里
 
 del dict['Name']  # 删除键是'Name'的条目
 dict.clear()      # 清空词典所有条目
 del dict          # 删除词典
+
