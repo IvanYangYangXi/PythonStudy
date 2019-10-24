@@ -56,6 +56,10 @@ for i in names:
 print("\n",names[0:-1:2]) # 间隔取值(0,和-1可以省略：names[::2])
 
 
+names_b = ["A","B","C","D","G"]
+sel = list(set(names).intersection(set(names_b))) # 获取两个list 的交集
+
+
 names_tuple = ("a","b") # 元组，固定不能改变的列表；只有 .index 、.count 两个方法
 
 
